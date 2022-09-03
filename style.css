@@ -1,8 +1,69 @@
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
 .container{
     display: grid;
-    
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    width: 100vw;
+    height: 100vh;
 }
-.sidebard{
-    background-color: blue;
-    color: white;   
+
+.sidebar{
+    background-color: rgb(0, 157, 255);
+    border: 1px solid black;
+    color: white;  
+    grid-column: 1/2;
+    grid-row: 1/3;
+    display: grid;
+    grid-template-rows: repeat(16, 1fr);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    gap: 10px;
+    padding: 20px;
+}
+
+.Dashboard{
+    grid-row: 1/3;
+    font-size: 30px;
+}
+
+.all{
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+}
+
+.all::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: ease-out 0.25s;
+}
+
+.all:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.header{
+    background-color: green;
+    border: 1px solid black;
+    color: white;  
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.content{
+    background-color: red;
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
