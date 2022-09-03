@@ -54,12 +54,6 @@ body,html {
     transform-origin: bottom left;
 }
 
-.content{
-    background-color: red;
-    grid-column: 2/3;
-    grid-row: 2/3;
-}
-
 input[type=text] {
     padding: 6px;
     margin-top: 8px;
@@ -80,6 +74,7 @@ input[type=text] {
     align-items: center;
     padding: 10px;
     gap: 0.5%;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .searchbox button {
@@ -93,7 +88,8 @@ input[type=text] {
     display: inline-block;
     position: relative;
     color: #ffffff;
-    justify-self: center;
+    justify-self: end;
+    margin-bottom: 5px;
 }
 
 
@@ -134,7 +130,7 @@ input[type=text] {
 
 .round {
     width: 80%;
-    background-color: silver;
+    background-color: rgba(192, 192, 192, 0.908);
     border-radius: 15px;
     border: 1px #000 solid;
     grid-column: 2/3;
@@ -225,3 +221,74 @@ input[type=text] {
     grid-column: 17/20;
     grid-row: 2/3;
 }
+
+.content1{
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.content{
+    background-color: rgb(224, 224, 224);
+    display: grid;
+    grid-template-columns: repeat(7, minmax(calc(100px + 20%), 1fr));
+    grid-template-rows: 1fr;
+}
+
+.title1{
+    grid-column: 1/3;
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+    gap: 10px;
+}
+
+.Projects{
+    align-self: center;
+    justify-self: start;
+    margin-top: 10px;
+    font-family: 'Dancing Script', cursive;
+    margin-left: 10px;
+}
+
+.title2{
+    display: grid;
+    grid-column: 3/4;
+    font-size: 30px;
+    justify-items: start;
+    justify-self: start;
+    align-self: flex-start;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 10px;
+    background-color: yellow;
+    width: 30%;
+}
+
+.A{
+    display: grid;
+    justify-self: start;
+}
+
+.full-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(30% + 100px), 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.box{
+    display:grid;
+    height: 200px;
+    border: 1px solid black;
+    background-color: red;
+    border-radius: 30px;
+}
+
+.Announcements{
+    background-color: green;
+}
+
+
